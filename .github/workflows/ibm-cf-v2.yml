@@ -52,7 +52,7 @@ jobs:
 
     - name: Download Latest V2Ray
       run: |
-        DOWNLOAD_URL="https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip"
+        DOWNLOAD_URL="https://github.com/v2fly/v2ray-core/releases/download/v4.32.1/v2ray-linux-64.zip"
         curl -fsSL "$DOWNLOAD_URL" -o "latest-v2ray.zip"
         unzip latest-v2ray.zip v2ray v2ctl geoip.dat geosite.dat
         rm latest-v2ray.zip
@@ -114,12 +114,14 @@ jobs:
                 "decryption": "none",
                 "clients": [
                   {
-                    "id": "${V2_UUID}"
+                    "id": "${V2_UUID}",
+                    "flow": "xtls-rprx-direct"
                   }
                 ]
               },
               "streamSettings": {
-                "network":"ws",
+                "network": "tcp",
+                "security": "xtls",
                 "wsSettings": {
                   "path": "${V2_WS_PATH_VLESS}"
                 }
