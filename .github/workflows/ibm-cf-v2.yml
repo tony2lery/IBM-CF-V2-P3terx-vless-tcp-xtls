@@ -124,9 +124,7 @@ jobs:
                 "network": "tcp",
                 "security": "xtls",
                 "xtlsSettings": {
-                    "alpn": [
-                        "http/1.1"
-                    ]
+                   
                 }
               }
             }
