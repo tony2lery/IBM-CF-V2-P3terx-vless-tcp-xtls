@@ -115,15 +115,18 @@ jobs:
                 "clients": [
                   {
                     "id": "${V2_UUID}",
-                    "flow": "xtls-rprx-direct"
+                    "flow": "xtls-rprx-direct",
+                    "level": 0
                   }
                 ]
               },
               "streamSettings": {
                 "network": "tcp",
                 "security": "xtls",
-                "wsSettings": {
-                  "path": "${V2_WS_PATH_VLESS}"
+                "xtlsSettings": {
+                    "alpn": [
+                        "http/1.1"
+                    ]
                 }
               }
             }
