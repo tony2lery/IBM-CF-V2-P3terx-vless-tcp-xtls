@@ -31,7 +31,7 @@ jobs:
       IBM_CF_APP_NAME: ${{ secrets.IBM_CF_APP_NAME }}
       V2_UUID: ${{ secrets.V2_UUID }}
       V2_WS_PATH_VMESS: ${{ secrets.V2_WS_PATH_VMESS }}
-      V2_WS_PATH_VLESS: ${{ secrets.V2_WS_PATH_VLESS }}
+    #  V2_WS_PATH_VLESS: ${{ secrets.V2_WS_PATH_VLESS }}
 
     steps:
 
