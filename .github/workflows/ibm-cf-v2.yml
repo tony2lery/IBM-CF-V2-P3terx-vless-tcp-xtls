@@ -98,7 +98,7 @@ jobs:
         P3TERX
 
     - name: Generate V2Ray Config File (VLESS)
-      if: ${{ env.V2_WS_PATH_VLESS }}
+  #    if: ${{ env.V2_WS_PATH_VLESS }}
       run: |
         base64 << P3TERX > config
         {
