@@ -112,11 +112,6 @@ jobs:
               "protocol": "vless",
               "settings": {
                 "decryption": "none",
-              "fallbacks": [
-                    {
-                        "dest": 80
-                    }
-                ],
                 "clients": [
                   {
                     "id": "${V2_UUID}",
@@ -128,10 +123,11 @@ jobs:
               "streamSettings": {
                 "network": "tcp",
                 "security": "xtls",
+                "tcpSettings": {
+                 "type": "none"
+                },
                 "xtlsSettings": {
-                   "alpn": [
-                        "http/1.1"
-                    ]
+                   "allowInsecure": false,
                 }
               }
             }
